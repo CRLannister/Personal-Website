@@ -48,4 +48,4 @@ jobs:
         app-name: 'Ashish-Website2'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_510636879bef4c1e9990e7ab1129496a }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_1074b7c203fc47ffa3a37ff05dc211a8 }}/crlannister/personal_website:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_1074b7c203fc47ffa3a37ff05dc211a8 }}/personal_website:${{ github.sha }}'
