@@ -2,6 +2,12 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy container app to Azure Web App - Ashish-portfolio
+env:
+  CI: false
+  GITHUB_USERNAME: ${{ github.repository_owner }}
+  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
+  USE_GITHUB_DATA: "true"
+  MEDIUM_USERNAME: "CRLannister" # Change this to your medium username
 
 on:
   push:
