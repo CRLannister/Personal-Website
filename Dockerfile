@@ -1,7 +1,7 @@
 # This file is the main docker file configurations
 
 # Official Node JS runtime as a parent image
-FROM node:10.16.0-alpine
+FROM node:18-alpine
 
 # Set the working directory to ./app
 WORKDIR /app
@@ -17,13 +17,13 @@ RUN apk add --no-cache git
 RUN npm install
 
 # Audit fix npm packages
-RUN npm audit fix
+# RUN npm audit fix --force
 
 # Bundle app source
 COPY . /app
 
 # Make port 443 available to the world outside this container
-EXPOSE 443
+EXPOSE 3000
 
 # Run app.js when the container launches
 CMD ["npm", "start"]
