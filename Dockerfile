@@ -22,5 +22,8 @@ RUN npm audit fix
 # Bundle app source
 COPY . /app
 
+# Make port 443 available to the world outside this container
+EXPOSE 443
+
 # Run app.js when the container launches
 CMD ["npm", "start"]
