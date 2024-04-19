@@ -22,6 +22,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set up environment variables
+      run: |
+        echo "GITHUB_USERNAME=$GITHUB_USERNAME" >> .env
+        echo "REACT_APP_GITHUB_TOKEN=$REACT_APP_GITHUB_TOKEN" >> .env
+        echo "USE_GITHUB_DATA=$USE_GITHUB_DATA" >> .env
+        echo "MEDIUM_USERNAME=$MEDIUM_USERNAME" >> .env
+      env:
+        GITHUB_USERNAME: ${{ github.repository_owner }}
+        REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
+        USE_GITHUB_DATA: "true"
+        MEDIUM_USERNAME: "CRLannister" # Change this to your medium username
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
