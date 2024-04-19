@@ -330,6 +330,20 @@ const blogSection = {
   subtitle:
     "I try to write and sometime publish some blogs !",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  blogs: [
+    {
+      url: "https://medium.com/analytics-vidhya/population-and-sample-parameters-86598dea03ce",
+      title: "Population and Sample Parameters",
+      description:
+        "Demystifying statistical concepts: Understand the significance of population vs. sample and the nuanced denominator terms in variance calculations for unbiased estimations"
+    },
+    {
+      url: "https://crlannister.medium.com/distribution-33630fe42dcc",
+      title: "Distribution",
+      description:
+        "Exploring statistical distribution: Uncover its purpose, distinction from histograms, and shared attributes, delving into the core of this vital statistical concept."
+    }
+  ],
   display: true // Set false to hide this section, defaults to true
 };
 
